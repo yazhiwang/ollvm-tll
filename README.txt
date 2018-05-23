@@ -33,3 +33,11 @@ How to Build:
 * String Obfuscation -mllvm -sobf
 
 
+It has been tested on Android 3.2 preview and NDKr17:
+To use it on Android studio, you need to goto following folder:
+$(NDK_FOLDER)/toolchains/
+cp -rf llvm orig_llvm
+cd llvm/prebuilt/darwin-x86_64 # it dedepnds on your OS, darwin-x86_64 can be others
+rm -rf *
+cp -rf ($BUILD_OLLVM)/bin .
+cp -rf ($BUILD_OLLVM)/lib .
