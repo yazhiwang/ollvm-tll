@@ -1,4 +1,4 @@
-Low Level Virtual Machine (LLVM)
+LLVM 6.0 + Ollvm + Armariris
 ================================
 
 This directory and its subdirectories contain source code for LLVM,
@@ -15,5 +15,21 @@ documentation setup.
 
 If you are writing a package for LLVM, see docs/Packaging.rst for our
 suggestions.
+
+How to Build:
+
+  $ git clone https://github.com/yazhiwang/ollvm-tll.git
+  $ mkdir build
+  $ cd build
+  $ cmake -DCMAKE_BUILD_TYPE=Release ../ollvm-tll/
+  $ make -j7
+  
+  
+  use -mllvm -bcf -mllvm -fla -mllvm -sub -mllvm -sobf
+  
+* Instructions Substitution -mllvm -sub
+* Bogus Control Flow -mllvm -bcf
+* Control Flow Flattening -mllvm -fla
+* String Obfuscation -mllvm -sobf
 
 
