@@ -33,3 +33,16 @@ How to Build:
 * String Obfuscation -mllvm -sobf
 
 
+It has been tested on Android 3.2 preview and NDKr17:
+To use it on Android studio, you need to goto following folder:
+$(NDK_FOLDER)/toolchains/
+cp -rf llvm orig_llvm
+cd llvm/prebuilt/darwin-x86_64 # it depends on your OS, darwin-x86_64 can be others
+rm -rf *
+cp -rf ($BUILD_OLLVM)/bin .
+cp -rf ($BUILD_OLLVM)/lib .
+
+
+# This code repo is similar to the previous work of Qrilee:
+https://github.com/Qrilee/Obfuscator-LLVM
+The reason why I redo it is because from NDKr17, it will use clang 6.0. And by default there is parameter "-nostdlib++", which is not supported by the LLVM version he did. There are several hassles when trying to use OLLVM on Android studio. Above steps are the easiest way to compile your NDK project with obfuscation using OLLVM+String OBFU
