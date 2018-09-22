@@ -21,9 +21,9 @@ How to Build:
   $ git clone https://github.com/yazhiwang/ollvm-tll.git
   $ mkdir build
   $ cd build
-  $ cmake -DCMAKE_BUILD_TYPE=Release ../ollvm-tll/
+  $ cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release ../ollvm-tll/
   $ make -j7
-  
+
   
   use -mllvm -bcf -mllvm -fla -mllvm -sub -mllvm -sobf
   
